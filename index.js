@@ -48,4 +48,12 @@ inquirer
                 responses.textColor
                 );
         }
+        console.log(responses);
+        fs.writeFile("shape.svg", responses.shape, (err) => {
+            err ? console.log(err) : console.log("SVG generated!");
+        });
     })
+
+    .catch((err) => {
+        console.log(err);
+    });
